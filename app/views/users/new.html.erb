@@ -1,0 +1,26 @@
+<div class="sign-up-form">
+  <div class="header">
+    <h2>Welcome!</h2>
+    <p>Fill out the form below to get started.</p>
+  </div>
+  <%= form_with scope: :user, url: users_path, local: true, class: "form" do |form| %>
+    <p class="input-group">
+      <%= form.label :mountain_project_email, 'Mountain Project Email' %><br>
+      <%= form.text_field :email %>
+    </p>
+
+    <p class="input-group">
+      <%= form.label :mountain_project_key, 'Mountain Project Key' %><br>
+      <%= form.text_field :mp_key %>
+    </p>
+
+    <p class="input-group">
+      <%= form.label :strava_athlete_id, 'Strava Athlete ID' %><br>
+      <%= form.text_field :athlete_id %>
+    </p>
+
+    <p class="input-group submit">
+      <%= form.submit 'Sign Up', class: "submit-button" %>
+    </p>
+  <% end %>
+</div>
